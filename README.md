@@ -52,22 +52,13 @@ For Windows-specific build:
 npm run package:win
 ```
 
-
-## Configuration
-
-The application uses `config.json` for configuration. Key settings include:
-
-- `cooldown`: API request cooldown time
-- `port`: WebSocket server port
-- `weapon`: Default weapon for skin display
-
 ## API Key Setup
 
 vRadar uses the Henrik Dev API for player statistics. The application includes a default API key, but you can provide your own in the Settings menu for better rate limits and reliability.
 
 To get your own API key:
-1. Visit [Henrik Dev API](https://henrikdev.xyz/)
-2. Sign up and get your API key
+1. Visit [HenrikDev Discord](https://discord.gg/bruEBrAV)
+2. Generate a key with their bot
 3. Enter it in the Settings menu within vRadar
 
 ## Contributing
