@@ -37,25 +37,6 @@ npm run build
 npm start
 ```
 
-## Development
-
-For development with hot-reload:
-```bash
-npm run dev
-```
-
-This will start both the Electron main process watcher and the React development server concurrently.
-
-### Available Scripts
-
-- `npm run dev` - Start development mode with hot-reload
-- `npm run build` - Build both Electron and React applications
-- `npm run build:electron` - Build only the Electron main process
-- `npm run build:react` - Build only the React frontend
-- `npm start` - Run the built application
-- `npm run package` - Build and package the application
-- `npm run package:win` - Build and package for Windows
-- `npm run lint` - Run ESLint on the codebase
 
 ## Building & Packaging
 
@@ -71,34 +52,6 @@ For Windows-specific build:
 npm run package:win
 ```
 
-The packaged application will be available in the `release/` directory.
-
-## Project Structure
-
-```
-vRadar/
-├── electron/           # Electron main process
-│   ├── core/          # Core services and utilities
-│   │   ├── states/    # Game state handlers (pregame, ingame, menus)
-│   │   └── ...        # Various service modules
-│   ├── main.ts        # Main Electron process entry point
-│   └── preload.ts     # Preload script for IPC
-├── src/               # React frontend
-│   ├── components/   # React components
-│   ├── pages/         # Main page components
-│   └── types/         # TypeScript type definitions
-├── public/            # Static assets (fonts, images)
-├── dist/              # Compiled output (generated)
-└── config.json        # Application configuration
-```
-
-## Technologies
-
-- **Frontend**: React 18, TypeScript, Vite
-- **Backend**: Electron, Node.js, TypeScript
-- **APIs**: Valorant API, Henrik Dev API
-- **WebSocket**: ws library for real-time communication
-- **UI**: Custom CSS with modern design patterns
 
 ## Configuration
 
