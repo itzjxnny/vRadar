@@ -1,0 +1,75 @@
+appId: com.valorant.vradar
+productName: vRadar
+copyright: Copyright © 2025
+
+directories:
+  buildResources: build
+  output: release
+
+# electron-builder automatically bundles production dependencies from package.json
+# We only need to specify what to exclude, not what to include
+files:
+  - "**/*"
+  - "!src/**/*"
+  - "!electron/**/*.ts"
+  - "!*.md"
+  - "!*.bat"
+  - "!logs/**/*"
+  - "!*.log"
+  - "!node_modules/@types/**/*"
+  - "!node_modules/.bin/**/*"
+  - "!node_modules/**/*.{md,ts,tsx,map,test.js,spec.js}"
+  - "!node_modules/**/test/**/*"
+  - "!node_modules/**/tests/**/*"
+  - "!node_modules/**/__tests__/**/*"
+  - "!node_modules/**/examples/**/*"
+  - "!node_modules/**/docs/**/*"
+  - "!node_modules/**/README*"
+  - "!node_modules/**/CHANGELOG*"
+  - "!node_modules/**/LICENSE*"
+  - "!node_modules/**/*.d.ts"
+  - "!node_modules/**/tsconfig.json"
+  - "!node_modules/**/.git/**/*"
+  - "!node_modules/**/.github/**/*"
+  - "!node_modules/**/.vscode/**/*"
+  - "!node_modules/**/.idea/**/*"
+  - "!node_modules/**/coverage/**/*"
+  - "!node_modules/**/.nyc_output/**/*"
+
+asarUnpack:
+  - "**/*.node"
+  - "**/node_modules/ws/**/*"
+  - "config.json"
+
+extraFiles:
+  - "config.json"
+
+extraMetadata:
+  main: dist/electron/main.js
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: dir
+      arch:
+        - x64
+  icon: public/vRadar.ico
+  requestedExecutionLevel: asInvoker
+  # Note: rcedit errors are common on Windows due to antivirus/file locks
+  # The build usually continues successfully despite these errors
+  # Suppress rcedit errors by not setting version strings (they're optional)
+  # Version info can be set in package.json instead
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: vRadar
+  installerIcon: public/vRadar.ico
+  uninstallerIcon: public/vRadar.ico
+  installerHeaderIcon: public/vRadar.ico
+  deleteAppDataOnUninstall: false
+

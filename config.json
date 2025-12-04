@@ -1,0 +1,21 @@
+{
+    "cooldown": 10,
+    "port": 1100,
+    "weapon": "vandal",
+    "chat_limit": 5,
+    "flags": {
+        "last_played": true,
+        "auto_hide_leaderboard": true,
+        "game_chat": true,
+        "discord_rpc": true
+    },
+    "showKD": true,
+    "showHS": true,
+    "showWR": true,
+    "showRR": true,
+    "showLevel": true,
+    "showPeak": true,
+    "showRank": true,
+    "showSkin": true,
+    "showParty": true
+}

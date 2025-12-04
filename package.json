@@ -1,0 +1,55 @@
+{
+  "name": "vradar",
+  "version": "1.0.0",
+  "description": "vRadar - VALORANT player tracker",
+  "main": "dist/electron/main.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:electron\" \"npm run dev:react\"",
+    "dev:electron": "tsc -w --project tsconfig.electron.json",
+    "dev:react": "vite",
+    "build": "npm run build:electron && npm run build:react",
+    "build:electron": "tsc --project tsconfig.electron.json",
+    "build:react": "vite build",
+    "start": "electron .",
+    "package": "npm run build && electron-builder",
+    "package:win": "npm run build && electron-builder --win",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "keywords": [
+    "valorant",
+    "rank",
+    "tracker",
+    "electron",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "electron-squirrel-startup": "^1.0.1",
+    "lucide-react": "^0.554.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^39.2.4",
+    "electron-builder": "^24.9.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.5"
+  }
+}
